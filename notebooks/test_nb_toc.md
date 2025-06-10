@@ -12,6 +12,7 @@
   - [Secondary Analysis](#secondary-analysis)
     - [Subgroup Analysis](#subgroup-analysis)
 - [Conclusion](#conclusion)
+- [Enzyme Kinetics Analysis](#enzyme-kinetics-analysis)
 
 <!-- /TOC -->
 
@@ -154,7 +155,26 @@ gantt
     Clinical Trial    :2025-07-01, 2026-06-30
 ```
 
+## Enzyme Kinetics Analysis
 
+Michaelis-Menten kinetics describe the rate of enzymatic reactions by relating reaction velocity to substrate concentration.
+
+```mermaid
+graph LR
+    S[Substrate S] -->|k1| ES[ES Complex]
+    ES -->|k-1| S
+    ES -->|k2| EP[EP Complex]
+    EP -->|k3| E[Enzyme E] 
+    EP --> P[Product P]
+    E -->|k1| ES
+    
+    style S fill:#ffecb3
+    style P fill:#a5d6a7
+    style ES fill:#ce93d8
+    style EP fill:#ce93d8
+```
+
+The steady-state assumption yields: v = (Vmax[S])/(Km + [S]) where Km = (k-1 + k2)/k1
 
 
 
