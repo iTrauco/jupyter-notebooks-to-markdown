@@ -1,0 +1,75 @@
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+*.nbconvert.md
+*.nbconvert.html
+*.nbconvert.pdf
+*.nbconvert.tex
+*.nbconvert.svg
+*.nbconvert.xml
+*~.ipynb
+*.bak.ipynb
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual Environments
+venv/
+.env/
+.venv/
+env/
+ENV/
+env.bak/
+*.env
+*.envrc
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage, pytest
+.coverage
+.tox/
+.nox/
+.cache/
+.pytest_cache/
+htmlcov/
+.coverage.*
+
+# Notebook extensions & config
+.nbextensions/
+.jupyter/
+jupyter_notebook_config.py
+jupyter_server_config.py
+
+# Mermaid and Markdown rendering artifacts
+*.svg
+*.md.html
+*.md.svg
+
+# GitHub Actions logs
+*.log
+logs/
+output/
+
+# Misc
+*.tmp
+*.bak
+*.swp
+*.swo
+*.old
