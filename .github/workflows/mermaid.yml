@@ -5,6 +5,8 @@ on:
 jobs:
   convert:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
       
@@ -18,12 +20,12 @@ jobs:
       
       - name: Convert notebooks to markdown
         run: |
-          jupyter nbconvert --to markdown test.ipynb
+          find . -name "*.ipynb" -exec jupyter nbconvert --to markdown {} \;
       
       - name: Commit files
         run: |
-          git config --local user.email "chris@trau.co"
-          git config --local user.name "iTrauco"
-          git add test.md
-          git commit -m "Convert notebook to markdown" || echo "No changes to commit"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git commit -m "Convert notebooks to markdown" || echo "No changes to commit"
           git push
